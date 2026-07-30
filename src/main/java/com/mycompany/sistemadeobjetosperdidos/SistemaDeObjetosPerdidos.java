@@ -4,7 +4,6 @@
 
 package com.mycompany.sistemadeobjetosperdidos;
 
-import java.lang.reflect.Array;
 import java.util.Arrays;
 import java.util.Scanner;
 
@@ -15,12 +14,13 @@ import java.util.Scanner;
 public class SistemaDeObjetosPerdidos {
 
     public static void main(String[] args) {
-    
+        
         Scanner EntradaDeDatos = new Scanner(System.in);
         Objeto registros = new Objeto();
 
         
-        int Opcion;
+        String Opcion;
+        
 
         do{
         
@@ -34,47 +34,52 @@ public class SistemaDeObjetosPerdidos {
             System.out.println(" 5.- Reclamar Objeto");
             System.out.println(" 0.- Salir\n");
 
-            System.out.print(" - OPCION: ");
-            Opcion = EntradaDeDatos.nextInt();
+            System.out.print(" -> OPCION: ");
+            Opcion = EntradaDeDatos.nextLine();
             System.out.print("\n");
-
-
-            switch(Opcion){
-
-                case 1:
-
-                    RegistrarObjetoPerdido(registros);
-                    break;
-
-                case 2:
-
-                    BuscarPorCodigo(registros);
-                    break;
-
-                case 3:
-
-                    BuscarPorCategoria(registros);
-                    break;
-
-                case 4:
-
-                    ListarObjeto(registros);
-                    break;
-
-                case 5:
-
-                    ReclamarObjeto(registros);
-                    break;
-
-                default:
-
-                    break;
-
-            }
             
-        }while(Opcion != 0);
-        
-        
+            if (Opcion.equals("1")||Opcion.equals("2")||Opcion.equals("3")||Opcion.equals("4")||Opcion.equals("5")||Opcion.equals("0")) {
+
+                
+                switch(Integer.parseInt(Opcion)){
+
+                    case 1:
+
+                        RegistrarObjetoPerdido(registros);
+                        break;
+
+                    case 2:
+
+                        BuscarPorCodigo(registros);
+                        break;
+
+                    case 3:
+
+                        BuscarPorCategoria(registros);
+                        break;
+
+                    case 4:
+
+                        ListarObjeto(registros);
+                        break;
+
+                    case 5:
+
+                        ReclamarObjeto(registros);
+                        break;
+
+                    default:
+
+                        break;
+
+                }
+            }else{
+            
+                System.out.println(" - OPCION NO VALIDA, INTENTE NUEVAMENTE\n");
+                
+            }    
+
+        }while(!Opcion.equals("0"));
         
     }
     
@@ -120,8 +125,9 @@ public class SistemaDeObjetosPerdidos {
         System.out.println(" 1.- ACEPTAR");
         System.out.println(" 2.- CANCELAR\n");
         
-        System.out.print(" - OPCION: ");
+        System.out.print(" -> OPCION: ");
         int Opcion = EntradaDeDatos.nextInt();
+        EntradaDeDatos.nextLine();
         System.out.print("\n");
         
         
@@ -142,7 +148,7 @@ public class SistemaDeObjetosPerdidos {
         System.out.print("\n");
 
         System.out.print(" - INGRESE EL CODIGO ID DEL OBJETO: ");
-        int ID = EntradaDeDatos.nextInt()+1;
+        int ID = EntradaDeDatos.nextInt()-1;
         String[] objeto = registros.getRegistros().get(ID);
 
         System.out.print("\n");
@@ -161,12 +167,16 @@ public class SistemaDeObjetosPerdidos {
         System.out.println(" - NOMBRE DEL RECLAMANTE: "+ objeto[6]);
         System.out.println(" - CODIGO DEL RECLAMANTE: "+ objeto[7]);
         System.out.println(" - CORREO DEL RECLAMANTE: "+ objeto[8]);
-        System.out.println(" - NUMERO DEL RECLAMANTE: "+ objeto[9]);  
+        System.out.println(" - TELEFONO DEL RECLAMANTE: "+ objeto[9]);  
         System.out.print("\n");
         
     }
 
-    public static void BuscarPorCategoria(Objeto registros) {}
+    public static void BuscarPorCategoria(Objeto registros) {
+    
+        System.out.println("    NO DISPONIBLE");
+        
+    }
     
     public static void ListarObjeto(Objeto registros) {
     
@@ -185,7 +195,100 @@ public class SistemaDeObjetosPerdidos {
         
     }
 
-    public static void ReclamarObjeto(Objeto registros) {}
+    public static void ReclamarObjeto(Objeto registros) {
+    
+        Scanner EntradaDeDatos = new Scanner(System.in);
+        
+        System.out.println("-------------------------");
+        System.out.print("\n");
+        
+        System.out.print(" -> INGRESE EL ID DEL OBJETO: ");
+        int ID = EntradaDeDatos.nextInt()-1;
+        String[] objeto = registros.getRegistros().get(ID);
+        
+        System.out.print("\n");
+        System.out.println(" ------- INFORMACION DEL OBJETO --------------------- ");
+        System.out.print("\n");
+        System.out.println(" - NOMBRE DEL OBJETO: "+ objeto[0]);
+        System.out.println(" - DESCRIPCION: "+ objeto[1]);
+        System.out.println(" - CATEGORIA: "+ objeto[2]);
+        System.out.println(" - LUGAR Y FEHCA: "+ objeto[3]);
+        System.out.println(" - REPORTANTE: "+ objeto[4]);
+        System.out.println(" - ESTADO DEL OBJETO: "+ objeto[5]);
+        System.out.print("\n");
+
+        System.out.println(" 1.- ACEPTAR");
+        System.out.println(" 2.- CANCELAR\n");
+        
+        System.out.print(" -> OPCION: ");
+        int Opcion = EntradaDeDatos.nextInt();
+        EntradaDeDatos.nextLine();
+        System.out.print("\n");
+        
+        if (Opcion == 1) {
+            
+            System.out.println("-------------------------");
+            System.out.print("\n");
+
+            System.out.print(" -> INGRESE LOS NOMBRES DEL RECLAMANTE: ");        
+            String reclamante = EntradaDeDatos.nextLine();
+            reclamante = reclamante.substring(0, 1).toUpperCase() + reclamante.substring(1).toLowerCase();
+
+            System.out.print(" -> INGRESE EL CODIGO DEL RECLAMANTE: ");        
+            String codigoDelReclamante = EntradaDeDatos.nextLine();
+            codigoDelReclamante = codigoDelReclamante.substring(0, 1).toUpperCase() + codigoDelReclamante.substring(1).toLowerCase();
+
+            System.out.print(" -> INGRESE EL CORREO DEL RECLAMANTE: ");        
+            String correoDelReclamante = EntradaDeDatos.nextLine();
+            correoDelReclamante = correoDelReclamante.substring(0, 1).toUpperCase() + correoDelReclamante.substring(1).toLowerCase();
+
+            System.out.print(" -> INGRESE EL TELEFONO DEL RECLAMANTE: ");      
+            String telefonoDelReclamante = EntradaDeDatos.nextLine();
+            telefonoDelReclamante = telefonoDelReclamante.substring(0, 1).toUpperCase() + telefonoDelReclamante.substring(1).toLowerCase();
+        
+            
+            System.out.print("\n");
+            System.out.println(" ------- INFORMACION DEL OBJETO --------------------- ");
+            System.out.print("\n");
+            System.out.println(" - NOMBRE DEL OBJETO: "+ objeto[0]);
+            System.out.println(" - DESCRIPCION: "+ objeto[1]);
+            System.out.println(" - CATEGORIA: "+ objeto[2]);
+            System.out.println(" - LUGAR Y FEHCA: "+ objeto[3]);
+            System.out.println(" - REPORTANTE: "+ objeto[4]);
+            System.out.println(" - ESTADO DEL OBJETO: "+ "RECLAMADO");
+            System.out.print("\n");
+
+            System.out.println("  ------- INFORMACION DEL RECLAMANTE --------------------- ");
+            System.out.print("\n");
+            System.out.println(" - NOMBRE DEL RECLAMANTE: "+ reclamante);
+            System.out.println(" - CODIGO DEL RECLAMANTE: "+ codigoDelReclamante);
+            System.out.println(" - CORREO DEL RECLAMANTE: "+ correoDelReclamante);
+            System.out.println(" - TELEFONO DEL RECLAMANTE: "+ telefonoDelReclamante);  
+            System.out.print("\n");
+            
+            System.out.println(" - ESTA TODO CORRECTO?? ");
+            System.out.println(" 1.- ACEPTAR");
+            System.out.println(" 2.- CANCELAR\n");
+        
+            System.out.print(" -> OPCION: ");
+            int opcion = EntradaDeDatos.nextInt();
+            EntradaDeDatos.nextLine();
+            
+            if (opcion == 1) {
+                
+                objeto[5] = "RECLAMADO";
+                objeto[6] = reclamante;
+                objeto[7] = codigoDelReclamante;
+                objeto[8] = correoDelReclamante;
+                objeto[9] = telefonoDelReclamante;
+                System.out.println("\n ");
+                System.out.println(" - OBJETO RECLAMADO CORRECTAMENTE :)\n");
+                
+            }
+        
+        }
         
     }
+        
+}
 

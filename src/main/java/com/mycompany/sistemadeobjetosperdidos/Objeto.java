@@ -14,7 +14,7 @@ public class Objeto {
     
     int IDDelObjeto;
     
-    String NombreDelObjeto, DescripcionDelObjeto, CategoriaDelObjeto, LugarYFecha, Reportante, EstadoDelObjeto, Reclamante, CodDeReclamante, CorreDelReclamante, TelefonoDelReclamante;
+    String NombreDelObjeto, DescripcionDelObjeto, CategoriaDelObjeto, LugarYFecha, Reportante, EstadoDelObjeto, Reclamante, CodigoDeReclamante, CorreDelReclamante, TelefonoDelReclamante;
     ArrayList<String[]> Registros = new ArrayList<>();
     
     public Objeto() {
@@ -30,7 +30,7 @@ public class Objeto {
         this.Reportante = Reportante;
         this.EstadoDelObjeto = EstadoDelObjeto;
         this.Reclamante = Reclamante;
-        this.CodDeReclamante = CodDeReclamante;
+        this.CodigoDeReclamante = CodDeReclamante;
         this.CorreDelReclamante = CorreDelReclamante;
         this.TelefonoDelReclamante = TelefonoDelReclamante;
     }
@@ -100,11 +100,11 @@ public class Objeto {
     }
 
     public String getCodDeReclamante() {
-        return CodDeReclamante;
+        return CodigoDeReclamante;
     }
 
     public void setCodDeReclamante(String CodDeReclamante) {
-        this.CodDeReclamante = CodDeReclamante;
+        this.CodigoDeReclamante = CodDeReclamante;
     }
 
     public String getCorreDelReclamante() {
