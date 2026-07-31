@@ -4,17 +4,23 @@
  */
 package com.mycompany.sistemadeobjetosperdidos;
 
+import java.awt.Image;
+import javax.swing.ImageIcon;
+
 /**
  *
  * @author ASUS
  */
-public class menu extends javax.swing.JFrame {
+public class Menu extends javax.swing.JFrame {
+  
 
     /**
      * Creates new form menu
      */
-    public menu() {
+    public Menu() {
+        setUndecorated(true);
         initComponents();
+   
     }
 
     /**
@@ -27,222 +33,236 @@ public class menu extends javax.swing.JFrame {
     private void initComponents() {
 
         Menu = new javax.swing.JPanel();
-        PanelSistemaTitulo = new javax.swing.JPanel();
-        LabelSistemaDeObjetosPerdidos = new javax.swing.JLabel();
-        PanelSistemaOpciones = new javax.swing.JPanel();
-        Button1 = new javax.swing.JButton();
-        Button2 = new javax.swing.JButton();
-        Button3 = new javax.swing.JButton();
-        Button4 = new javax.swing.JButton();
-        Button5 = new javax.swing.JButton();
-        PanelSistemaSalir = new javax.swing.JPanel();
-        ButtonSalir = new javax.swing.JButton();
+        SistemaDeObjetosPerdidosPanelTitulo = new javax.swing.JPanel();
+        SistemaDeObjetosPerdidosPanelOpciones = new javax.swing.JPanel();
+        registrarObjetoPerdidoButton = new javax.swing.JButton();
+        buscarPorCategoriaButton = new javax.swing.JButton();
+        buscarPorCodigoButton = new javax.swing.JButton();
+        listarObjetoButton = new javax.swing.JButton();
+        reclamarObjetoButton = new javax.swing.JButton();
+        salirButton = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        Menu.setBackground(new java.awt.Color(204, 204, 204));
+        Menu.setBackground(new java.awt.Color(0, 0, 0));
+        Menu.setBorder(javax.swing.BorderFactory.createEtchedBorder(java.awt.Color.white, java.awt.Color.white));
+        Menu.setPreferredSize(new java.awt.Dimension(500, 700));
+        Menu.addComponentListener(new java.awt.event.ComponentAdapter() {
+            public void componentShown(java.awt.event.ComponentEvent evt) {
+                MenuComponentShown(evt);
+            }
+        });
         Menu.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        LabelSistemaDeObjetosPerdidos.setFont(new java.awt.Font("SansSerif", 1, 24)); // NOI18N
-        LabelSistemaDeObjetosPerdidos.setForeground(new java.awt.Color(255, 255, 255));
-        LabelSistemaDeObjetosPerdidos.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        LabelSistemaDeObjetosPerdidos.setText("SISTEMA OBJETOS PERDIDOS");
-        LabelSistemaDeObjetosPerdidos.setToolTipText("");
-        LabelSistemaDeObjetosPerdidos.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
+        SistemaDeObjetosPerdidosPanelTitulo.setBackground(new java.awt.Color(0, 0, 0));
+        SistemaDeObjetosPerdidosPanelTitulo.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createEtchedBorder(java.awt.Color.white, java.awt.Color.white), " SISTEMA OBJETOS PERDIDOS ", javax.swing.border.TitledBorder.LEFT, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 1, 24), new java.awt.Color(255, 255, 255))); // NOI18N
+        SistemaDeObjetosPerdidosPanelTitulo.setFocusCycleRoot(true);
+        SistemaDeObjetosPerdidosPanelTitulo.setFocusable(false);
+        SistemaDeObjetosPerdidosPanelTitulo.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        javax.swing.GroupLayout PanelSistemaTituloLayout = new javax.swing.GroupLayout(PanelSistemaTitulo);
-        PanelSistemaTitulo.setLayout(PanelSistemaTituloLayout);
-        PanelSistemaTituloLayout.setHorizontalGroup(
-            PanelSistemaTituloLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
-            .addGroup(PanelSistemaTituloLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(PanelSistemaTituloLayout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(LabelSistemaDeObjetosPerdidos, javax.swing.GroupLayout.PREFERRED_SIZE, 370, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(0, 0, Short.MAX_VALUE)))
-        );
-        PanelSistemaTituloLayout.setVerticalGroup(
-            PanelSistemaTituloLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 120, Short.MAX_VALUE)
-            .addGroup(PanelSistemaTituloLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(PanelSistemaTituloLayout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(LabelSistemaDeObjetosPerdidos)
-                    .addGap(0, 0, Short.MAX_VALUE)))
-        );
+        SistemaDeObjetosPerdidosPanelOpciones.setBackground(new java.awt.Color(0, 0, 0));
+        SistemaDeObjetosPerdidosPanelOpciones.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createEtchedBorder(java.awt.Color.white, java.awt.Color.white), " OPCIONES: ", javax.swing.border.TitledBorder.LEADING, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 1, 14), new java.awt.Color(255, 255, 255))); // NOI18N
 
-        Menu.add(PanelSistemaTitulo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 400, 120));
-
-        PanelSistemaOpciones.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
-
-        Button1.setText("1.- Registrar Objeto Perdido");
-        Button1.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        Button1.setHorizontalTextPosition(javax.swing.SwingConstants.LEFT);
-        Button1.addContainerListener(new java.awt.event.ContainerAdapter() {
+        registrarObjetoPerdidoButton.setBackground(new java.awt.Color(0, 0, 0));
+        registrarObjetoPerdidoButton.setForeground(new java.awt.Color(255, 255, 255));
+        registrarObjetoPerdidoButton.setText("   1.- Registrar Objeto Perdido");
+        registrarObjetoPerdidoButton.setBorder(javax.swing.BorderFactory.createEtchedBorder(java.awt.Color.white, java.awt.Color.white));
+        registrarObjetoPerdidoButton.setFocusPainted(false);
+        registrarObjetoPerdidoButton.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        registrarObjetoPerdidoButton.setHorizontalTextPosition(javax.swing.SwingConstants.LEFT);
+        registrarObjetoPerdidoButton.addContainerListener(new java.awt.event.ContainerAdapter() {
             public void componentAdded(java.awt.event.ContainerEvent evt) {
-                Button1ComponentAdded(evt);
+                registrarObjetoPerdidoButtonComponentAdded(evt);
             }
         });
-        Button1.addActionListener(new java.awt.event.ActionListener() {
+        registrarObjetoPerdidoButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                Button1ActionPerformed(evt);
+                registrarObjetoPerdidoButtonActionPerformed(evt);
             }
         });
 
-        Button2.setText("2.- Buscar por Código");
-        Button2.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        Button2.setHorizontalTextPosition(javax.swing.SwingConstants.LEFT);
-        Button2.addActionListener(new java.awt.event.ActionListener() {
+        buscarPorCategoriaButton.setBackground(new java.awt.Color(0, 0, 0));
+        buscarPorCategoriaButton.setForeground(new java.awt.Color(255, 255, 255));
+        buscarPorCategoriaButton.setText("   3.- Buscar por Categoría");
+        buscarPorCategoriaButton.setBorder(javax.swing.BorderFactory.createEtchedBorder(java.awt.Color.white, java.awt.Color.white));
+        buscarPorCategoriaButton.setFocusPainted(false);
+        buscarPorCategoriaButton.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        buscarPorCategoriaButton.setHorizontalTextPosition(javax.swing.SwingConstants.LEFT);
+        buscarPorCategoriaButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                Button2ActionPerformed(evt);
+                buscarPorCategoriaButtonActionPerformed(evt);
             }
         });
 
-        Button3.setText("3.- Buscar por Categoría");
-        Button3.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        Button3.setHorizontalTextPosition(javax.swing.SwingConstants.LEFT);
+        buscarPorCodigoButton.setBackground(new java.awt.Color(0, 0, 0));
+        buscarPorCodigoButton.setForeground(new java.awt.Color(255, 255, 255));
+        buscarPorCodigoButton.setText("   2.- Buscar por Código");
+        buscarPorCodigoButton.setBorder(javax.swing.BorderFactory.createEtchedBorder(java.awt.Color.white, java.awt.Color.white));
+        buscarPorCodigoButton.setFocusPainted(false);
+        buscarPorCodigoButton.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        buscarPorCodigoButton.setHorizontalTextPosition(javax.swing.SwingConstants.LEFT);
+        buscarPorCodigoButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                buscarPorCodigoButtonActionPerformed(evt);
+            }
+        });
 
-        Button4.setText("4.- Listar Objetos");
-        Button4.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        Button4.setHorizontalTextPosition(javax.swing.SwingConstants.LEFT);
+        listarObjetoButton.setBackground(new java.awt.Color(0, 0, 0));
+        listarObjetoButton.setForeground(new java.awt.Color(255, 255, 255));
+        listarObjetoButton.setText("   4.- Listar Objetos");
+        listarObjetoButton.setBorder(javax.swing.BorderFactory.createEtchedBorder(java.awt.Color.white, java.awt.Color.white));
+        listarObjetoButton.setFocusPainted(false);
+        listarObjetoButton.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        listarObjetoButton.setHorizontalTextPosition(javax.swing.SwingConstants.LEFT);
+        listarObjetoButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                listarObjetoButtonActionPerformed(evt);
+            }
+        });
 
-        Button5.setText("5.- Reclamar Objeto");
-        Button5.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        Button5.setHorizontalTextPosition(javax.swing.SwingConstants.LEFT);
+        reclamarObjetoButton.setBackground(new java.awt.Color(0, 0, 0));
+        reclamarObjetoButton.setForeground(new java.awt.Color(255, 255, 255));
+        reclamarObjetoButton.setText("   5.- Reclamar Objeto");
+        reclamarObjetoButton.setBorder(javax.swing.BorderFactory.createEtchedBorder(java.awt.Color.white, java.awt.Color.white));
+        reclamarObjetoButton.setFocusPainted(false);
+        reclamarObjetoButton.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        reclamarObjetoButton.setHorizontalTextPosition(javax.swing.SwingConstants.LEFT);
+        reclamarObjetoButton.setMaximumSize(new java.awt.Dimension(103, 20));
+        reclamarObjetoButton.setMinimumSize(new java.awt.Dimension(103, 20));
+        reclamarObjetoButton.setPreferredSize(new java.awt.Dimension(103, 20));
+        reclamarObjetoButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                reclamarObjetoButtonActionPerformed(evt);
+            }
+        });
 
-        javax.swing.GroupLayout PanelSistemaOpcionesLayout = new javax.swing.GroupLayout(PanelSistemaOpciones);
-        PanelSistemaOpciones.setLayout(PanelSistemaOpcionesLayout);
-        PanelSistemaOpcionesLayout.setHorizontalGroup(
-            PanelSistemaOpcionesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(PanelSistemaOpcionesLayout.createSequentialGroup()
-                .addGap(33, 33, 33)
-                .addGroup(PanelSistemaOpcionesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(Button1)
-                    .addComponent(Button2, javax.swing.GroupLayout.PREFERRED_SIZE, 183, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(Button3, javax.swing.GroupLayout.PREFERRED_SIZE, 183, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(Button4, javax.swing.GroupLayout.PREFERRED_SIZE, 183, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(Button5, javax.swing.GroupLayout.PREFERRED_SIZE, 183, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(38, Short.MAX_VALUE))
+        javax.swing.GroupLayout SistemaDeObjetosPerdidosPanelOpcionesLayout = new javax.swing.GroupLayout(SistemaDeObjetosPerdidosPanelOpciones);
+        SistemaDeObjetosPerdidosPanelOpciones.setLayout(SistemaDeObjetosPerdidosPanelOpcionesLayout);
+        SistemaDeObjetosPerdidosPanelOpcionesLayout.setHorizontalGroup(
+            SistemaDeObjetosPerdidosPanelOpcionesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, SistemaDeObjetosPerdidosPanelOpcionesLayout.createSequentialGroup()
+                .addGap(19, 19, 19)
+                .addGroup(SistemaDeObjetosPerdidosPanelOpcionesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(reclamarObjetoButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(listarObjetoButton, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(buscarPorCategoriaButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(buscarPorCodigoButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(registrarObjetoPerdidoButton, javax.swing.GroupLayout.DEFAULT_SIZE, 325, Short.MAX_VALUE))
+                .addGap(24, 24, 24))
         );
-        PanelSistemaOpcionesLayout.setVerticalGroup(
-            PanelSistemaOpcionesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(PanelSistemaOpcionesLayout.createSequentialGroup()
-                .addGap(31, 31, 31)
-                .addComponent(Button1)
-                .addGap(13, 13, 13)
-                .addComponent(Button2)
-                .addGap(13, 13, 13)
-                .addComponent(Button3)
-                .addGap(13, 13, 13)
-                .addComponent(Button4)
-                .addGap(13, 13, 13)
-                .addComponent(Button5)
-                .addContainerGap(36, Short.MAX_VALUE))
+        SistemaDeObjetosPerdidosPanelOpcionesLayout.setVerticalGroup(
+            SistemaDeObjetosPerdidosPanelOpcionesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(SistemaDeObjetosPerdidosPanelOpcionesLayout.createSequentialGroup()
+                .addGap(28, 28, 28)
+                .addComponent(registrarObjetoPerdidoButton, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(buscarPorCodigoButton, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(buscarPorCategoriaButton, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(listarObjetoButton, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(reclamarObjetoButton, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(137, Short.MAX_VALUE))
         );
 
-        Menu.add(PanelSistemaOpciones, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 160, 260, 260));
+        SistemaDeObjetosPerdidosPanelTitulo.add(SistemaDeObjetosPerdidosPanelOpciones, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 60, 380, 490));
 
-        PanelSistemaSalir.setBorder(javax.swing.BorderFactory.createTitledBorder(""));
+        salirButton.setBackground(new java.awt.Color(0, 0, 0));
+        salirButton.setForeground(new java.awt.Color(255, 255, 255));
+        salirButton.setText("Salir");
+        salirButton.setBorder(javax.swing.BorderFactory.createEtchedBorder(java.awt.Color.white, java.awt.Color.white));
+        salirButton.setFocusPainted(false);
+        salirButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                salirButtonActionPerformed(evt);
+            }
+        });
+        SistemaDeObjetosPerdidosPanelTitulo.add(salirButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 570, 260, 30));
 
-        ButtonSalir.setText("Salir");
-
-        javax.swing.GroupLayout PanelSistemaSalirLayout = new javax.swing.GroupLayout(PanelSistemaSalir);
-        PanelSistemaSalir.setLayout(PanelSistemaSalirLayout);
-        PanelSistemaSalirLayout.setHorizontalGroup(
-            PanelSistemaSalirLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 108, Short.MAX_VALUE)
-            .addGroup(PanelSistemaSalirLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(PanelSistemaSalirLayout.createSequentialGroup()
-                    .addGap(16, 16, 16)
-                    .addComponent(ButtonSalir)
-                    .addContainerGap(16, Short.MAX_VALUE)))
-        );
-        PanelSistemaSalirLayout.setVerticalGroup(
-            PanelSistemaSalirLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 68, Short.MAX_VALUE)
-            .addGroup(PanelSistemaSalirLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(PanelSistemaSalirLayout.createSequentialGroup()
-                    .addGap(20, 20, 20)
-                    .addComponent(ButtonSalir)
-                    .addContainerGap(21, Short.MAX_VALUE)))
-        );
-
-        Menu.add(PanelSistemaSalir, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 550, 110, 70));
+        Menu.add(SistemaDeObjetosPerdidosPanelTitulo, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 30, 440, 640));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(Menu, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
+            .addComponent(Menu, javax.swing.GroupLayout.PREFERRED_SIZE, 500, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(Menu, javax.swing.GroupLayout.DEFAULT_SIZE, 650, Short.MAX_VALUE)
+            .addComponent(Menu, javax.swing.GroupLayout.PREFERRED_SIZE, 700, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void Button1ComponentAdded(java.awt.event.ContainerEvent evt) {//GEN-FIRST:event_Button1ComponentAdded
+    private void reclamarObjetoButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_reclamarObjetoButtonActionPerformed
+
+        Reclamar reclamar = new Reclamar();
+        reclamar.setVisible(true);
+        reclamar.setLocationRelativeTo(null);
+
         // TODO add your handling code here:
-    }//GEN-LAST:event_Button1ComponentAdded
+    }//GEN-LAST:event_reclamarObjetoButtonActionPerformed
 
-    private void Button1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Button1ActionPerformed
+    private void listarObjetoButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_listarObjetoButtonActionPerformed
+
+        ListarJFrame listar = new ListarJFrame();
+        listar.setVisible(true);
+        listar.setLocationRelativeTo(null);
+
         // TODO add your handling code here:
-    }//GEN-LAST:event_Button1ActionPerformed
+    }//GEN-LAST:event_listarObjetoButtonActionPerformed
 
-    private void Button2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Button2ActionPerformed
+    private void buscarPorCodigoButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buscarPorCodigoButtonActionPerformed
+
+        Busqueda1 busqueda1 = new Busqueda1();
+        busqueda1.setVisible(true);
+        busqueda1.setLocationRelativeTo(null);
+
         // TODO add your handling code here:
-    }//GEN-LAST:event_Button2ActionPerformed
+    }//GEN-LAST:event_buscarPorCodigoButtonActionPerformed
 
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
-        try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-                    break;
-                }
-            }
-        } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(menu.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(menu.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(menu.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(menu.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        }
-        //</editor-fold>
+    private void registrarObjetoPerdidoButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_registrarObjetoPerdidoButtonActionPerformed
 
-        /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new menu().setVisible(true);
-            }
-        });
-    }
+        RegistroJFrame registro = new RegistroJFrame();
+        registro.setVisible(true);
+        registro.setLocationRelativeTo(null);
+
+        // TODO add your handling code here:
+
+    }//GEN-LAST:event_registrarObjetoPerdidoButtonActionPerformed
+
+    private void registrarObjetoPerdidoButtonComponentAdded(java.awt.event.ContainerEvent evt) {//GEN-FIRST:event_registrarObjetoPerdidoButtonComponentAdded
+        // TODO add your handling code here:
+    }//GEN-LAST:event_registrarObjetoPerdidoButtonComponentAdded
+
+    private void buscarPorCategoriaButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buscarPorCategoriaButtonActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_buscarPorCategoriaButtonActionPerformed
+
+    private void salirButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_salirButtonActionPerformed
+        
+        System.exit(0);
+        
+        // TODO add your handling code here:
+    }//GEN-LAST:event_salirButtonActionPerformed
+
+    private void MenuComponentShown(java.awt.event.ComponentEvent evt) {//GEN-FIRST:event_MenuComponentShown
+        // TODO add your handling code here:
+    }//GEN-LAST:event_MenuComponentShown
+
+    
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton Button1;
-    private javax.swing.JButton Button2;
-    private javax.swing.JButton Button3;
-    private javax.swing.JButton Button4;
-    private javax.swing.JButton Button5;
-    private javax.swing.JButton ButtonSalir;
-    private javax.swing.JLabel LabelSistemaDeObjetosPerdidos;
     private javax.swing.JPanel Menu;
-    private javax.swing.JPanel PanelSistemaOpciones;
-    private javax.swing.JPanel PanelSistemaSalir;
-    private javax.swing.JPanel PanelSistemaTitulo;
+    private javax.swing.JPanel SistemaDeObjetosPerdidosPanelOpciones;
+    private javax.swing.JPanel SistemaDeObjetosPerdidosPanelTitulo;
+    private javax.swing.JButton buscarPorCategoriaButton;
+    private javax.swing.JButton buscarPorCodigoButton;
+    private javax.swing.JButton listarObjetoButton;
+    private javax.swing.JButton reclamarObjetoButton;
+    private javax.swing.JButton registrarObjetoPerdidoButton;
+    private javax.swing.JButton salirButton;
     // End of variables declaration//GEN-END:variables
 }

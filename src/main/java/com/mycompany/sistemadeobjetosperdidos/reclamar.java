@@ -8,12 +8,13 @@ package com.mycompany.sistemadeobjetosperdidos;
  *
  * @author ASUS
  */
-public class reclamar extends javax.swing.JFrame {
+public class Reclamar extends javax.swing.JFrame {
 
     /**
      * Creates new form reclamar
      */
-    public reclamar() {
+    public Reclamar() {
+        setUndecorated(true);
         initComponents();
     }
 
@@ -26,384 +27,435 @@ public class reclamar extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        Menu = new javax.swing.JPanel();
-        reclamarObjetoPanelTitulo = new javax.swing.JPanel();
-        reclamarObjetoLabel = new javax.swing.JLabel();
+        jPanel6 = new javax.swing.JPanel();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        jPanel1 = new javax.swing.JPanel();
+        menu = new javax.swing.JPanel();
         reclamarObjetoPanelBusqueda = new javax.swing.JPanel();
-        IDLabel = new javax.swing.JLabel();
         IDTextField = new javax.swing.JTextField();
         buscarButton = new javax.swing.JButton();
-        mostrarInformacionTextField = new javax.swing.JTextField();
-        reclamarObjetoPanelOpciones1 = new javax.swing.JPanel();
-        confirmarCancelarObjetoLabel = new javax.swing.JLabel();
-        confirmarButton = new javax.swing.JButton();
-        cancelarButton1 = new javax.swing.JButton();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        mostrarInformacionTextArea = new javax.swing.JTextArea();
         reclamarObjetoPanel = new javax.swing.JPanel();
-        reclamanteLabel = new javax.swing.JLabel();
+        jPanel2 = new javax.swing.JPanel();
         reclamanteTextField = new javax.swing.JTextField();
-        codigoDelReclamanteLabel = new javax.swing.JLabel();
+        jPanel3 = new javax.swing.JPanel();
         codigoDelReclamanteTextField = new javax.swing.JTextField();
-        correoDelReclamanteLabel = new javax.swing.JLabel();
+        jPanel4 = new javax.swing.JPanel();
         correoDelReclamanteTextField = new javax.swing.JTextField();
-        telefonoDelReclamanteLabel = new javax.swing.JLabel();
+        jPanel5 = new javax.swing.JPanel();
         telefonoDelReclamanteTextField = new javax.swing.JTextField();
-        reclamarObjetoPanelOpciones2 = new javax.swing.JPanel();
         aceptarButton = new javax.swing.JButton();
         cancelarButton2 = new javax.swing.JButton();
 
+        jPanel6.setPreferredSize(new java.awt.Dimension(500, 1150));
+
+        javax.swing.GroupLayout jPanel6Layout = new javax.swing.GroupLayout(jPanel6);
+        jPanel6.setLayout(jPanel6Layout);
+        jPanel6Layout.setHorizontalGroup(
+            jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 500, Short.MAX_VALUE)
+        );
+        jPanel6Layout.setVerticalGroup(
+            jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 1157, Short.MAX_VALUE)
+        );
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setBackground(new java.awt.Color(0, 0, 0));
+        setMaximumSize(new java.awt.Dimension(500, 700));
+        setMinimumSize(new java.awt.Dimension(500, 700));
+        setPreferredSize(new java.awt.Dimension(500, 700));
+        setResizable(false);
+        setSize(new java.awt.Dimension(500, 700));
 
-        Menu.setBackground(new java.awt.Color(204, 204, 204));
-        Menu.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        jScrollPane2.setBackground(new java.awt.Color(0, 0, 0));
+        jScrollPane2.setBorder(null);
+        jScrollPane2.setHorizontalScrollBarPolicy(javax.swing.ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
+        jScrollPane2.setHorizontalScrollBar(null);
+        jScrollPane2.setPreferredSize(new java.awt.Dimension(500, 1168));
 
-        reclamarObjetoLabel.setFont(new java.awt.Font("SansSerif", 1, 24)); // NOI18N
-        reclamarObjetoLabel.setForeground(new java.awt.Color(255, 255, 255));
-        reclamarObjetoLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        reclamarObjetoLabel.setText("REGISTRO DE OBJETOS PERDIDOS");
-        reclamarObjetoLabel.setToolTipText("");
-        reclamarObjetoLabel.setAutoscrolls(true);
+        jPanel1.setBackground(new java.awt.Color(0, 0, 0));
+        jPanel1.setBorder(javax.swing.BorderFactory.createEtchedBorder(java.awt.Color.white, java.awt.Color.white));
+        jPanel1.setForeground(new java.awt.Color(255, 255, 255));
+        jPanel1.setPreferredSize(new java.awt.Dimension(500, 1168));
 
-        javax.swing.GroupLayout reclamarObjetoPanelTituloLayout = new javax.swing.GroupLayout(reclamarObjetoPanelTitulo);
-        reclamarObjetoPanelTitulo.setLayout(reclamarObjetoPanelTituloLayout);
-        reclamarObjetoPanelTituloLayout.setHorizontalGroup(
-            reclamarObjetoPanelTituloLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, reclamarObjetoPanelTituloLayout.createSequentialGroup()
-                .addContainerGap(25, Short.MAX_VALUE)
-                .addComponent(reclamarObjetoLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 358, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(17, 17, 17))
-        );
-        reclamarObjetoPanelTituloLayout.setVerticalGroup(
-            reclamarObjetoPanelTituloLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(reclamarObjetoPanelTituloLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(reclamarObjetoLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 78, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(36, Short.MAX_VALUE))
-        );
+        menu.setBackground(new java.awt.Color(0, 0, 0));
+        menu.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createEtchedBorder(java.awt.Color.white, java.awt.Color.white), " RECLAMAR OBJETO ", javax.swing.border.TitledBorder.LEFT, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 1, 24), new java.awt.Color(255, 255, 255))); // NOI18N
+        menu.setForeground(new java.awt.Color(255, 255, 255));
+        menu.setPreferredSize(new java.awt.Dimension(450, 1068));
 
-        Menu.add(reclamarObjetoPanelTitulo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 400, 120));
+        reclamarObjetoPanelBusqueda.setBackground(new java.awt.Color(0, 0, 0));
+        reclamarObjetoPanelBusqueda.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createEtchedBorder(java.awt.Color.white, java.awt.Color.white), " INGRESE EL ID DEL OBJETO A RECLAMAR:    ", javax.swing.border.TitledBorder.LEFT, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 1, 14), new java.awt.Color(255, 255, 255))); // NOI18N
 
-        reclamarObjetoPanelBusqueda.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
-
-        IDLabel.setText("INGRESE EL ID DEL OBJETO A RECLAMAR:");
-
-        IDTextField.setForeground(new java.awt.Color(102, 102, 102));
+        IDTextField.setBackground(new java.awt.Color(0, 0, 0));
+        IDTextField.setForeground(new java.awt.Color(255, 255, 255));
+        IDTextField.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         IDTextField.setText("Ejm: 1, 2, 3,...");
         IDTextField.setToolTipText("");
+        IDTextField.setBorder(null);
         IDTextField.setCaretColor(new java.awt.Color(102, 102, 102));
-
-        buscarButton.setText("Buscar");
-        buscarButton.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                buscarButtonActionPerformed(evt);
-            }
-        });
-
-        mostrarInformacionTextField.setForeground(new java.awt.Color(102, 102, 102));
-        mostrarInformacionTextField.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        mostrarInformacionTextField.setActionCommand("<Not Set>");
-        mostrarInformacionTextField.setCaretColor(new java.awt.Color(102, 102, 102));
-        mostrarInformacionTextField.setCursor(new java.awt.Cursor(java.awt.Cursor.TEXT_CURSOR));
-        mostrarInformacionTextField.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                mostrarInformacionTextFieldActionPerformed(evt);
-            }
-        });
 
         javax.swing.GroupLayout reclamarObjetoPanelBusquedaLayout = new javax.swing.GroupLayout(reclamarObjetoPanelBusqueda);
         reclamarObjetoPanelBusqueda.setLayout(reclamarObjetoPanelBusquedaLayout);
         reclamarObjetoPanelBusquedaLayout.setHorizontalGroup(
             reclamarObjetoPanelBusquedaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(reclamarObjetoPanelBusquedaLayout.createSequentialGroup()
-                .addGap(20, 20, 20)
-                .addGroup(reclamarObjetoPanelBusquedaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addGroup(reclamarObjetoPanelBusquedaLayout.createSequentialGroup()
-                        .addGroup(reclamarObjetoPanelBusquedaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(IDLabel)
-                            .addGroup(reclamarObjetoPanelBusquedaLayout.createSequentialGroup()
-                                .addGap(122, 122, 122)
-                                .addComponent(buscarButton)))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(IDTextField))
-                    .addComponent(mostrarInformacionTextField, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 336, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(18, Short.MAX_VALUE))
+                .addContainerGap()
+                .addComponent(IDTextField, javax.swing.GroupLayout.DEFAULT_SIZE, 354, Short.MAX_VALUE)
+                .addContainerGap())
         );
         reclamarObjetoPanelBusquedaLayout.setVerticalGroup(
             reclamarObjetoPanelBusquedaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(reclamarObjetoPanelBusquedaLayout.createSequentialGroup()
-                .addGap(28, 28, 28)
-                .addGroup(reclamarObjetoPanelBusquedaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(IDLabel)
-                    .addComponent(IDTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(buscarButton)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(mostrarInformacionTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 281, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(20, Short.MAX_VALUE))
+                .addComponent(IDTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 7, Short.MAX_VALUE))
         );
 
-        Menu.add(reclamarObjetoPanelBusqueda, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 130, 380, 400));
-
-        reclamarObjetoPanelOpciones1.setBorder(javax.swing.BorderFactory.createTitledBorder(""));
-
-        confirmarCancelarObjetoLabel.setText("ES EL OBJETO CORRECTO??");
-
-        confirmarButton.setText("Confirmar");
-        confirmarButton.addActionListener(new java.awt.event.ActionListener() {
+        buscarButton.setBackground(new java.awt.Color(0, 0, 0));
+        buscarButton.setForeground(new java.awt.Color(255, 255, 255));
+        buscarButton.setText("Buscar");
+        buscarButton.setBorder(javax.swing.BorderFactory.createEtchedBorder(java.awt.Color.white, java.awt.Color.white));
+        buscarButton.setFocusPainted(false);
+        buscarButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                confirmarButtonActionPerformed(evt);
+                buscarButtonActionPerformed(evt);
             }
         });
 
-        cancelarButton1.setText("Cancelar");
-        cancelarButton1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                cancelarButton1ActionPerformed(evt);
-            }
-        });
+        jScrollPane1.setBorder(null);
 
-        javax.swing.GroupLayout reclamarObjetoPanelOpciones1Layout = new javax.swing.GroupLayout(reclamarObjetoPanelOpciones1);
-        reclamarObjetoPanelOpciones1.setLayout(reclamarObjetoPanelOpciones1Layout);
-        reclamarObjetoPanelOpciones1Layout.setHorizontalGroup(
-            reclamarObjetoPanelOpciones1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(reclamarObjetoPanelOpciones1Layout.createSequentialGroup()
-                .addGroup(reclamarObjetoPanelOpciones1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(reclamarObjetoPanelOpciones1Layout.createSequentialGroup()
-                        .addGap(32, 32, 32)
-                        .addComponent(confirmarButton)
-                        .addGap(18, 18, 18)
-                        .addComponent(cancelarButton1))
-                    .addGroup(reclamarObjetoPanelOpciones1Layout.createSequentialGroup()
-                        .addGap(44, 44, 44)
-                        .addComponent(confirmarCancelarObjetoLabel)))
-                .addContainerGap(21, Short.MAX_VALUE))
-        );
-        reclamarObjetoPanelOpciones1Layout.setVerticalGroup(
-            reclamarObjetoPanelOpciones1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, reclamarObjetoPanelOpciones1Layout.createSequentialGroup()
-                .addContainerGap(30, Short.MAX_VALUE)
-                .addComponent(confirmarCancelarObjetoLabel)
-                .addGap(18, 18, 18)
-                .addGroup(reclamarObjetoPanelOpciones1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(cancelarButton1)
-                    .addComponent(confirmarButton))
-                .addGap(27, 27, 27))
-        );
+        mostrarInformacionTextArea.setBackground(new java.awt.Color(0, 0, 0));
+        mostrarInformacionTextArea.setColumns(20);
+        mostrarInformacionTextArea.setFont(new java.awt.Font("Cascadia Code", 0, 12)); // NOI18N
+        mostrarInformacionTextArea.setForeground(new java.awt.Color(255, 255, 255));
+        mostrarInformacionTextArea.setRows(5);
+        mostrarInformacionTextArea.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createEtchedBorder(java.awt.Color.white, java.awt.Color.white), " INFORMACION DEL OBJETO   ", javax.swing.border.TitledBorder.LEFT, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 1, 14), new java.awt.Color(255, 255, 255))); // NOI18N
+        jScrollPane1.setViewportView(mostrarInformacionTextArea);
 
-        Menu.add(reclamarObjetoPanelOpciones1, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 540, 240, 120));
+        reclamarObjetoPanel.setBackground(new java.awt.Color(0, 0, 0));
+        reclamarObjetoPanel.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createEtchedBorder(java.awt.Color.white, java.awt.Color.white), " REGISTRO DEL RECLAMANTE    ", javax.swing.border.TitledBorder.LEFT, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 1, 14), new java.awt.Color(255, 255, 255))); // NOI18N
+        reclamarObjetoPanel.setForeground(new java.awt.Color(255, 255, 255));
 
-        reclamarObjetoPanel.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jPanel2.setBackground(new java.awt.Color(0, 0, 0));
+        jPanel2.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createEtchedBorder(java.awt.Color.white, java.awt.Color.white), " NOMBRES COMPLETOS DEL RECLAMANTE:    ", javax.swing.border.TitledBorder.LEFT, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 1, 14), new java.awt.Color(255, 255, 255))); // NOI18N
+        jPanel2.setForeground(new java.awt.Color(255, 255, 255));
 
-        reclamanteLabel.setText("NOMBRES COMPLETOS DEL RECLAMANTE");
-
-        reclamanteTextField.setForeground(new java.awt.Color(102, 102, 102));
+        reclamanteTextField.setBackground(new java.awt.Color(0, 0, 0));
+        reclamanteTextField.setFont(new java.awt.Font("Segoe UI", 0, 13)); // NOI18N
+        reclamanteTextField.setForeground(new java.awt.Color(255, 255, 255));
         reclamanteTextField.setText("Ejm: Laptop, Pomo, Gorra, etc.");
         reclamanteTextField.setToolTipText("");
         reclamanteTextField.setCaretColor(new java.awt.Color(102, 102, 102));
 
-        codigoDelReclamanteLabel.setText("CODIGO DE ESTUDIANTE DEL RECLAMANTE");
+        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
+        jPanel2.setLayout(jPanel2Layout);
+        jPanel2Layout.setHorizontalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(reclamanteTextField)
+                .addContainerGap())
+        );
+        jPanel2Layout.setVerticalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(reclamanteTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+        );
 
-        codigoDelReclamanteTextField.setForeground(new java.awt.Color(102, 102, 102));
+        jPanel3.setBackground(new java.awt.Color(0, 0, 0));
+        jPanel3.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createEtchedBorder(java.awt.Color.white, java.awt.Color.white), " CODIGO DE ESTUDIANTE DEL RECLAMANTE:    ", javax.swing.border.TitledBorder.LEFT, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 1, 14), new java.awt.Color(255, 255, 255))); // NOI18N
+        jPanel3.setForeground(new java.awt.Color(255, 255, 255));
+
+        codigoDelReclamanteTextField.setBackground(new java.awt.Color(0, 0, 0));
+        codigoDelReclamanteTextField.setFont(new java.awt.Font("Segoe UI", 0, 13)); // NOI18N
+        codigoDelReclamanteTextField.setForeground(new java.awt.Color(255, 255, 255));
         codigoDelReclamanteTextField.setText("Ejm: Laptop, Pomo, Gorra, etc.");
         codigoDelReclamanteTextField.setToolTipText("");
         codigoDelReclamanteTextField.setCaretColor(new java.awt.Color(102, 102, 102));
 
-        correoDelReclamanteLabel.setText("CORREO DEL RECLAMANTE");
+        javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
+        jPanel3.setLayout(jPanel3Layout);
+        jPanel3Layout.setHorizontalGroup(
+            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(codigoDelReclamanteTextField)
+                .addContainerGap())
+        );
+        jPanel3Layout.setVerticalGroup(
+            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(codigoDelReclamanteTextField, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 40, Short.MAX_VALUE)
+        );
 
-        correoDelReclamanteTextField.setForeground(new java.awt.Color(102, 102, 102));
+        jPanel4.setBackground(new java.awt.Color(0, 0, 0));
+        jPanel4.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createEtchedBorder(java.awt.Color.white, java.awt.Color.white), " CORREO DEL RECLAMANTE:   ", javax.swing.border.TitledBorder.LEFT, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 1, 14), new java.awt.Color(255, 255, 255))); // NOI18N
+        jPanel4.setForeground(new java.awt.Color(255, 255, 255));
+
+        correoDelReclamanteTextField.setBackground(new java.awt.Color(0, 0, 0));
+        correoDelReclamanteTextField.setFont(new java.awt.Font("Segoe UI", 0, 13)); // NOI18N
+        correoDelReclamanteTextField.setForeground(new java.awt.Color(255, 255, 255));
         correoDelReclamanteTextField.setText("Ejm: Laptop, Pomo, Gorra, etc.");
         correoDelReclamanteTextField.setToolTipText("");
         correoDelReclamanteTextField.setCaretColor(new java.awt.Color(102, 102, 102));
+        correoDelReclamanteTextField.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                correoDelReclamanteTextFieldActionPerformed(evt);
+            }
+        });
 
-        telefonoDelReclamanteLabel.setText("TELEFONO DEL RECLAMANTE");
+        javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
+        jPanel4.setLayout(jPanel4Layout);
+        jPanel4Layout.setHorizontalGroup(
+            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel4Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(correoDelReclamanteTextField)
+                .addContainerGap())
+        );
+        jPanel4Layout.setVerticalGroup(
+            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(correoDelReclamanteTextField, javax.swing.GroupLayout.DEFAULT_SIZE, 40, Short.MAX_VALUE)
+        );
 
-        telefonoDelReclamanteTextField.setForeground(new java.awt.Color(102, 102, 102));
+        jPanel5.setBackground(new java.awt.Color(0, 0, 0));
+        jPanel5.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createEtchedBorder(java.awt.Color.white, java.awt.Color.white), " TELEFONO DEL RECLAMANTE:    ", javax.swing.border.TitledBorder.LEFT, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 1, 14), new java.awt.Color(255, 255, 255))); // NOI18N
+        jPanel5.setForeground(new java.awt.Color(255, 255, 255));
+
+        telefonoDelReclamanteTextField.setBackground(new java.awt.Color(0, 0, 0));
+        telefonoDelReclamanteTextField.setFont(new java.awt.Font("Segoe UI", 0, 13)); // NOI18N
+        telefonoDelReclamanteTextField.setForeground(new java.awt.Color(255, 255, 255));
         telefonoDelReclamanteTextField.setText("Ejm: Laptop, Pomo, Gorra, etc.");
         telefonoDelReclamanteTextField.setToolTipText("");
         telefonoDelReclamanteTextField.setCaretColor(new java.awt.Color(102, 102, 102));
+        telefonoDelReclamanteTextField.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                telefonoDelReclamanteTextFieldActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
+        jPanel5.setLayout(jPanel5Layout);
+        jPanel5Layout.setHorizontalGroup(
+            jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel5Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(telefonoDelReclamanteTextField)
+                .addContainerGap())
+        );
+        jPanel5Layout.setVerticalGroup(
+            jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(telefonoDelReclamanteTextField, javax.swing.GroupLayout.DEFAULT_SIZE, 43, Short.MAX_VALUE)
+        );
 
         javax.swing.GroupLayout reclamarObjetoPanelLayout = new javax.swing.GroupLayout(reclamarObjetoPanel);
         reclamarObjetoPanel.setLayout(reclamarObjetoPanelLayout);
         reclamarObjetoPanelLayout.setHorizontalGroup(
             reclamarObjetoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(reclamarObjetoPanelLayout.createSequentialGroup()
-                .addGap(20, 20, 20)
-                .addGroup(reclamarObjetoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(correoDelReclamanteLabel)
-                    .addComponent(codigoDelReclamanteLabel)
-                    .addComponent(telefonoDelReclamanteLabel)
-                    .addComponent(reclamanteTextField)
-                    .addComponent(codigoDelReclamanteTextField)
-                    .addComponent(telefonoDelReclamanteTextField)
-                    .addComponent(correoDelReclamanteTextField, javax.swing.GroupLayout.DEFAULT_SIZE, 329, Short.MAX_VALUE)
-                    .addComponent(reclamanteLabel))
-                .addContainerGap(25, Short.MAX_VALUE))
+                .addContainerGap()
+                .addGroup(reclamarObjetoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jPanel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jPanel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap())
         );
         reclamarObjetoPanelLayout.setVerticalGroup(
             reclamarObjetoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(reclamarObjetoPanelLayout.createSequentialGroup()
                 .addGap(33, 33, 33)
-                .addComponent(reclamanteLabel)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(reclamanteTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(12, 12, 12)
-                .addComponent(codigoDelReclamanteLabel)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(codigoDelReclamanteTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(correoDelReclamanteLabel)
+                .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(correoDelReclamanteTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(12, 12, 12)
-                .addComponent(telefonoDelReclamanteLabel)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(telefonoDelReclamanteTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(125, 125, 125))
+                .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(jPanel5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(31, Short.MAX_VALUE))
         );
 
-        Menu.add(reclamarObjetoPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 670, 380, 310));
-
-        reclamarObjetoPanelOpciones2.setBorder(javax.swing.BorderFactory.createTitledBorder(""));
-
+        aceptarButton.setBackground(new java.awt.Color(0, 0, 0));
+        aceptarButton.setForeground(new java.awt.Color(255, 255, 255));
         aceptarButton.setText("Aceptar");
+        aceptarButton.setBorder(javax.swing.BorderFactory.createEtchedBorder(java.awt.Color.white, java.awt.Color.white));
+        aceptarButton.setFocusPainted(false);
         aceptarButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 aceptarButtonActionPerformed(evt);
             }
         });
 
+        cancelarButton2.setBackground(new java.awt.Color(0, 0, 0));
+        cancelarButton2.setForeground(new java.awt.Color(255, 255, 255));
         cancelarButton2.setText("Cancelar");
+        cancelarButton2.setBorder(javax.swing.BorderFactory.createEtchedBorder(java.awt.Color.white, java.awt.Color.white));
+        cancelarButton2.setFocusPainted(false);
         cancelarButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 cancelarButton2ActionPerformed(evt);
             }
         });
 
-        javax.swing.GroupLayout reclamarObjetoPanelOpciones2Layout = new javax.swing.GroupLayout(reclamarObjetoPanelOpciones2);
-        reclamarObjetoPanelOpciones2.setLayout(reclamarObjetoPanelOpciones2Layout);
-        reclamarObjetoPanelOpciones2Layout.setHorizontalGroup(
-            reclamarObjetoPanelOpciones2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(reclamarObjetoPanelOpciones2Layout.createSequentialGroup()
-                .addGap(28, 28, 28)
-                .addComponent(aceptarButton)
-                .addGap(18, 18, 18)
-                .addComponent(cancelarButton2)
-                .addContainerGap(36, Short.MAX_VALUE))
+        javax.swing.GroupLayout menuLayout = new javax.swing.GroupLayout(menu);
+        menu.setLayout(menuLayout);
+        menuLayout.setHorizontalGroup(
+            menuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(menuLayout.createSequentialGroup()
+                .addGap(29, 29, 29)
+                .addGroup(menuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addGroup(menuLayout.createSequentialGroup()
+                        .addComponent(aceptarButton, javax.swing.GroupLayout.PREFERRED_SIZE, 178, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(cancelarButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 178, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(reclamarObjetoPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jScrollPane1)
+                    .addComponent(reclamarObjetoPanelBusqueda, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, menuLayout.createSequentialGroup()
+                        .addComponent(buscarButton, javax.swing.GroupLayout.PREFERRED_SIZE, 228, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(77, 77, 77)))
+                .addContainerGap(31, Short.MAX_VALUE))
         );
-        reclamarObjetoPanelOpciones2Layout.setVerticalGroup(
-            reclamarObjetoPanelOpciones2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(reclamarObjetoPanelOpciones2Layout.createSequentialGroup()
-                .addGap(19, 19, 19)
-                .addGroup(reclamarObjetoPanelOpciones2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(cancelarButton2)
-                    .addComponent(aceptarButton))
-                .addContainerGap(22, Short.MAX_VALUE))
+        menuLayout.setVerticalGroup(
+            menuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(menuLayout.createSequentialGroup()
+                .addGap(23, 23, 23)
+                .addComponent(reclamarObjetoPanelBusqueda, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(buscarButton, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 373, Short.MAX_VALUE)
+                .addGap(18, 18, 18)
+                .addComponent(reclamarObjetoPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addGroup(menuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(cancelarButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(aceptarButton, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(21, 21, 21))
         );
 
-        Menu.add(reclamarObjetoPanelOpciones2, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 1020, 240, 70));
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(23, 23, 23)
+                .addComponent(menu, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(23, Short.MAX_VALUE))
+        );
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(32, 32, 32)
+                .addComponent(menu, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+
+        jScrollPane2.setViewportView(jPanel1);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(Menu, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(Menu, javax.swing.GroupLayout.PREFERRED_SIZE, 1117, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(49, Short.MAX_VALUE))
+            .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 1157, Short.MAX_VALUE)
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void aceptarButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_aceptarButtonActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_aceptarButtonActionPerformed
-
-    private void cancelarButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cancelarButton2ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_cancelarButton2ActionPerformed
-
     private void buscarButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buscarButtonActionPerformed
+
+        String[] objeto = Objeto.getLista().get(Integer.parseInt(IDTextField.getText())-1);
+        
+        mostrarInformacionTextArea.setText("");
+        
+        mostrarInformacionTextArea.append("\n");
+        mostrarInformacionTextArea.append(" ------- INFORMACION DEL OBJETO ---------------------\n ");
+        mostrarInformacionTextArea.append("\n");
+        mostrarInformacionTextArea.append(" - NOMBRE DEL OBJETO: "+ objeto[0]+"\n");
+        mostrarInformacionTextArea.append(" - DESCRIPCION: "+ objeto[1]+"\n");
+        mostrarInformacionTextArea.append(" - CATEGORIA: "+ objeto[2]+"\n");
+        mostrarInformacionTextArea.append(" - LUGAR Y FEHCA: "+ objeto[3]+"\n");
+        mostrarInformacionTextArea.append(" - REPORTANTE: "+ objeto[4]+"\n");
+        mostrarInformacionTextArea.append(" - ESTADO DEL OBJETO: "+ objeto[5]+"\n");
+        mostrarInformacionTextArea.append("\n");
+        
+        mostrarInformacionTextArea.append("  ------- INFORMACION DEL RECLAMANTE ---------------------\n ");
+        mostrarInformacionTextArea.append("\n");
+        mostrarInformacionTextArea.append(" - NOMBRE DEL RECLAMANTE: "+ objeto[6]+"\n");
+        mostrarInformacionTextArea.append(" - CODIGO DEL RECLAMANTE: "+ objeto[7]+"\n");
+        mostrarInformacionTextArea.append(" - CORREO DEL RECLAMANTE: "+ objeto[8]+"\n");
+        mostrarInformacionTextArea.append(" - TELEFONO DEL RECLAMANTE: "+ objeto[9]+"\n");  
+        mostrarInformacionTextArea.append("\n");
+
         // TODO add your handling code here:
     }//GEN-LAST:event_buscarButtonActionPerformed
 
-    private void mostrarInformacionTextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mostrarInformacionTextFieldActionPerformed
+    private void cancelarButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cancelarButton2ActionPerformed
+
+        this.dispose();
+
         // TODO add your handling code here:
-    }//GEN-LAST:event_mostrarInformacionTextFieldActionPerformed
+    }//GEN-LAST:event_cancelarButton2ActionPerformed
 
-    private void confirmarButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_confirmarButtonActionPerformed
+    private void aceptarButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_aceptarButtonActionPerformed
+
+        String[] objeto = Objeto.getLista().get(Integer.parseInt(IDTextField.getText())-1);
+
+        String reclamante = reclamanteTextField.getText();
+        reclamante = reclamante.substring(0, 1).toUpperCase() + reclamante.substring(1).toLowerCase();
+
+        String codigoDelReclamante = codigoDelReclamanteTextField.getText();
+        codigoDelReclamante= codigoDelReclamante.substring(0, 1).toUpperCase() + codigoDelReclamante.substring(1).toLowerCase();
+
+        String correoDelReclamante = correoDelReclamanteTextField.getText();
+        correoDelReclamante = correoDelReclamante.substring(0, 1).toUpperCase() + correoDelReclamante.substring(1).toLowerCase();
+
+        String telefonoDelReclamante = telefonoDelReclamanteTextField.getText();
+        telefonoDelReclamante = telefonoDelReclamante.substring(0, 1).toUpperCase() + telefonoDelReclamante.substring(1).toLowerCase();
+
+        objeto[5] = "RECLAMADO";
+        objeto[6] = reclamante;
+        objeto[7] = codigoDelReclamante;
+        objeto[8] = correoDelReclamante;
+        objeto[9] = telefonoDelReclamante;
+
+        this.dispose();
+
         // TODO add your handling code here:
-    }//GEN-LAST:event_confirmarButtonActionPerformed
+    }//GEN-LAST:event_aceptarButtonActionPerformed
 
-    private void cancelarButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cancelarButton1ActionPerformed
+    private void telefonoDelReclamanteTextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_telefonoDelReclamanteTextFieldActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_cancelarButton1ActionPerformed
+    }//GEN-LAST:event_telefonoDelReclamanteTextFieldActionPerformed
 
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
-        try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-                    break;
-                }
-            }
-        } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(reclamar.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(reclamar.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(reclamar.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(reclamar.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        }
-        //</editor-fold>
-
-        /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new reclamar().setVisible(true);
-            }
-        });
-    }
+    private void correoDelReclamanteTextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_correoDelReclamanteTextFieldActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_correoDelReclamanteTextFieldActionPerformed
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel IDLabel;
     private javax.swing.JTextField IDTextField;
-    private javax.swing.JPanel Menu;
     private javax.swing.JButton aceptarButton;
     private javax.swing.JButton buscarButton;
-    private javax.swing.JButton cancelarButton1;
     private javax.swing.JButton cancelarButton2;
-    private javax.swing.JLabel codigoDelReclamanteLabel;
     private javax.swing.JTextField codigoDelReclamanteTextField;
-    private javax.swing.JButton confirmarButton;
-    private javax.swing.JLabel confirmarCancelarObjetoLabel;
-    private javax.swing.JLabel correoDelReclamanteLabel;
     private javax.swing.JTextField correoDelReclamanteTextField;
-    private javax.swing.JTextField mostrarInformacionTextField;
-    private javax.swing.JLabel reclamanteLabel;
+    private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel jPanel2;
+    private javax.swing.JPanel jPanel3;
+    private javax.swing.JPanel jPanel4;
+    private javax.swing.JPanel jPanel5;
+    private javax.swing.JPanel jPanel6;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JPanel menu;
+    private javax.swing.JTextArea mostrarInformacionTextArea;
     private javax.swing.JTextField reclamanteTextField;
-    private javax.swing.JLabel reclamarObjetoLabel;
     private javax.swing.JPanel reclamarObjetoPanel;
     private javax.swing.JPanel reclamarObjetoPanelBusqueda;
-    private javax.swing.JPanel reclamarObjetoPanelOpciones1;
-    private javax.swing.JPanel reclamarObjetoPanelOpciones2;
-    private javax.swing.JPanel reclamarObjetoPanelTitulo;
-    private javax.swing.JLabel telefonoDelReclamanteLabel;
     private javax.swing.JTextField telefonoDelReclamanteTextField;
     // End of variables declaration//GEN-END:variables
 }
