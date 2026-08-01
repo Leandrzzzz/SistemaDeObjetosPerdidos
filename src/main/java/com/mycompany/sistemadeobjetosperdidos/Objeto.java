@@ -17,5 +17,5 @@ public class Objeto {
     public static ArrayList<String[]> getLista() {
         return lista;
     }
- 
+    
 }

@@ -15,9 +15,9 @@ public class SistemaDeObjetosPerdidos {
 
     public static void main(String[] args) {
         
-        Objeto registros = new Objeto();
+        ObjetoDAO.cargarObjetos();
         
-        Menu menu = new Menu();
+        MenuJFrame menu = new MenuJFrame();
         menu.setVisible(true);
         menu.setLocationRelativeTo(null);
         

@@ -325,7 +325,16 @@ public class RegistroJFrame extends javax.swing.JFrame {
         String reportante = reportanteTextField.getText();
         reportante = reportante.substring(0, 1).toUpperCase() + reportante.substring(1).toLowerCase();
         
-        Objeto.getLista().add(new String[]{nombreDelObjeto,descripcionDelObjeto,categoriaDelObjeto,lugarYFecha,reportante,"PERDIDO",null,null,null,null});
+        CodigoJFrame codigo = new CodigoJFrame();
+        codigo.setVisible(true);
+        codigo.setLocationRelativeTo(null);
+        
+        String idDelObjeto = Integer.toString(Objeto.getLista().size()+1);
+        
+        String[] Registro = {idDelObjeto, nombreDelObjeto,descripcionDelObjeto,categoriaDelObjeto,lugarYFecha,reportante,"PERDIDO",null,null,null,null};
+        
+        ObjetoDAO.registrarObjeto(Registro);
+        ObjetoDAO.cargarObjetos();
         
         this.dispose();
         

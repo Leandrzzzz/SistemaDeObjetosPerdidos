@@ -4,6 +4,7 @@
  */
 package com.mycompany.sistemadeobjetosperdidos;
 
+import static com.mycompany.sistemadeobjetosperdidos.ObjetoDAO.cargarObjetos;
 import java.util.Arrays;
 
 /**
@@ -19,18 +20,19 @@ public class ListarJFrame extends javax.swing.JFrame {
         
         setUndecorated(true);
         initComponents();
+
         
         for (int i = 0; i < Objeto.getLista().size(); i++) {
 
             String[] objeto = Objeto.getLista().get(i);
-            objeto[1] = "NO DISPONIBLE";
+            objeto[2] = "NO DISPONIBLE";
             
             listadoTextArea.append("\n");
             listadoTextArea.append("\n");
             
-            listadoTextArea.append(" REGISTRO ID ("+(i+1)+"):\n");
+            listadoTextArea.append(" REGISTRO ID ("+objeto[0]+"):\n");
             
-            for (int j = 0; j < 10; j++) {
+            for (int j = 1; j < 11; j++) {
                 
                 listadoTextArea.append("   - "+objeto[j]+"\n");
 
